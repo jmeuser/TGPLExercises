@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-var echos = [3]func()(){echo1,echo2,echo3}
+var echos = [3]func(){echo1,echo2,echo3}
 
 func main() {
 	for i,f:= range echos {
@@ -17,7 +17,7 @@ func main() {
 	}
 }
 
-func stopwatch(f func()()) time.Duration {
+func stopwatch(f func()) time.Duration {
 	t0 := time.Now()
 	f()
 	return time.Since(t0)
